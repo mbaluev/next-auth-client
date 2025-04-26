@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
-    "build-cloudflare": "prisma generate && next build",
+    "build": "yarn prisma-generate && next build",
     "start": "next start",
     "lint": "next lint",
     "prisma-deploy": "prisma migrate deploy --schema=./prisma/schema.prisma",
