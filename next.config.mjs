@@ -21,5 +21,7 @@ const nextConfig = {
     AUTH_GOOGLE_CLIENT_SECRET: process.env.AUTH_GOOGLE_CLIENT_SECRET,
   },
 };
-
 export default nextConfig;
+
+// import { initOpenNextCloudflareForDev } from '@opennextjs/cloudflare';
+// initOpenNextCloudflareForDev();
