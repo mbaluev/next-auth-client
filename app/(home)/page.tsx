@@ -55,7 +55,7 @@ export default function Home() {
           </ButtonLogin>
         </div>
       )}
-      <div>{process.env.DATABASE_URL}</div>
+      {/*<div>{process.env.DATABASE_URL}</div>*/}
       <div className="break-words">{user ? JSON.stringify(user) : '-'}</div>
     </div>
   );
