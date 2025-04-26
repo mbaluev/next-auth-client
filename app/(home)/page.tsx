@@ -5,16 +5,19 @@ import { Logo } from '@/components/layout/logo';
 import { ButtonLogin } from '@/components/auth/button-login';
 import { Button } from '@/components/ui/button';
 import { Dot } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { getUserByEmail } from '@/core/auth/data/user';
+import { User } from '@prisma/client';
 
 export default function Home() {
   const auth = useIsAuth();
 
-  // const [user, setUser] = useState<User | null>(null);
-  // useEffect(() => {
-  //   getUserByEmail('mbaluev.dev@gmail.com').then((data) => {
-  //     setUser(data);
-  //   });
-  // }, []);
+  const [user, setUser] = useState<User | null>(null);
+  useEffect(() => {
+    getUserByEmail('mbaluev.dev@gmail.com').then((data) => {
+      setUser(data);
+    });
+  }, []);
 
   return (
     <div className="space-y-10 text-center">
@@ -52,8 +55,8 @@ export default function Home() {
           </ButtonLogin>
         </div>
       )}
-      {/*<div>{process.env.DATABASE_URL}</div>*/}
-      {/*<div className="break-words">{user ? JSON.stringify(user) : '-'}</div>*/}
+      <div>{process.env.DATABASE_URL}</div>
+      <div className="break-words">{user ? JSON.stringify(user) : '-'}</div>
     </div>
   );
 }
