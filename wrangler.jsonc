@@ -1,7 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "main": ".open-next/worker.js",
-  "name": "next-auth-v5",
+  "name": "next-auth-client",
   "compatibility_date": "2025-04-24",
   "compatibility_flags": ["nodejs_compat"],
   "assets": {
@@ -12,7 +12,7 @@
     {
       "binding": "WORKER_SELF_REFERENCE",
       // The service should match the "name" of your worker
-      "service": "next-auth-v5"
+      "service": "next-auth-client"
     }
   ],
 }
