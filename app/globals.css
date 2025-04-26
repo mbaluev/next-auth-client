@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+:root {
+  height: 100%;
+}
+
+svg.icon,
+svg.lucide {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 45 8% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 45 8% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 45 8% 20%;
+
+    --sidebar: 0 0% 96%;
+    --sidebar-foreground: 45 8% 20%;
+
+    --primary: 210 77% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 60 3% 94%;
+    --secondary-foreground: 45 8% 20%;
+
+    --muted: 60 4% 91%;
+    --muted-foreground: 40 2% 68%;
+
+    --accent: 60 3% 94%;
+    --accent-foreground: 45 8% 20%;
+
+    --destructive: 0 73% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --warning: 40 88% 59%;
+    --warning-foreground: 0 0% 100%;
+
+    --success: 170 63% 44%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 60 4% 88%;
+    --input: 60 4% 88%;
+    --ring: 60 4% 88%;
+
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 12%;
+    --foreground: 0 0% 90%;
+
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 90%;
+
+    --popover: 0 0% 15%;
+    --popover-foreground: 0 0% 90%;
+
+    --sidebar: 0 0% 15%;
+    --sidebar-foreground: 20 0% 90%;
+
+    --primary: 210 77% 70%;
+    --primary-foreground: 0 0% 10%;
+
+    --secondary: 0 0% 17%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 0 0% 22%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 0 0% 20%;
+    --accent-foreground: 0 0% 90%;
+
+    --destructive: 0 63% 66%;
+    --destructive-foreground: 0 0% 10%;
+
+    --warning: 41 78% 69%;
+    --warning-foreground: 0 0% 10%;
+
+    --success: 170 63% 64%;
+    --success-foreground: 0 0% 10%;
+
+    --border: 0 0% 22%;
+    --input: 0 0% 22%;
+    --ring: 0 0% 22%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  input:-webkit-autofill,
+  select:-webkit-autofill,
+  textarea:-webkit-autofill {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: hsl(var(--foreground));
+    -webkit-box-shadow: none;
+  }
+}
