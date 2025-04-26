@@ -1,3 +1,5 @@
+'use server';
+
 import { db } from '@/core/utils/db';
 
 export const getUserByEmail = async (email: string) => {

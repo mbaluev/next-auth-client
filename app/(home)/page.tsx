@@ -8,6 +8,14 @@ import { Dot } from 'lucide-react';
 
 export default function Home() {
   const auth = useIsAuth();
+
+  // const [user, setUser] = useState<User | null>(null);
+  // useEffect(() => {
+  //   getUserByEmail('mbaluev.dev@gmail.com').then((data) => {
+  //     setUser(data);
+  //   });
+  // }, []);
+
   return (
     <div className="space-y-10 text-center">
       <div className="text-6xl flex gap-8 flex-row flex-wrap items-center justify-center">
@@ -44,6 +52,8 @@ export default function Home() {
           </ButtonLogin>
         </div>
       )}
+      {/*<div>{process.env.DATABASE_URL}</div>*/}
+      {/*<div className="break-words">{user ? JSON.stringify(user) : '-'}</div>*/}
     </div>
   );
 }
