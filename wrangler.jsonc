@@ -11,8 +11,7 @@
   "services": [
     {
       "binding": "WORKER_SELF_REFERENCE",
-      // The service should match the "name" of your worker
       "service": "next-auth-client"
     }
-  ],
+  ]
 }
